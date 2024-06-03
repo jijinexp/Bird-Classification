@@ -25,3 +25,6 @@ def post_data():
         pred,pred_idx,probs = learn_inf.predict(img)
         print(pred)
         return jsonify(f'Prediction: {pred}; Probability: {probs[pred_idx]:.04f}')
+
+if __name__ == "__main__":
+    app.run(debug=True)
