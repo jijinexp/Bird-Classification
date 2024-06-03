@@ -20,7 +20,7 @@ def post_data():
     if file:
         # Process the file here
         print(f"Received file: {file.filename}")
-        learn_inf = load_learner('./models/export.pkl')
+        learn_inf = load_learner('api/models/export.pkl')
         img = PILImage.create(file)
         pred,pred_idx,probs = learn_inf.predict(img)
         print(pred)
